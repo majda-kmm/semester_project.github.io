@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Student Allocation at EURECOM</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="school-banner">
+        <div class="school-title">GRADUATE SCHOOL AND RESEARCH IN DIGITAL SCIENCE</div>
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="School Logo" class="school-logo">
+    </div>
+    <h1>Project Student Allocation at EURECOM</h1>
+    <div class="upload-box">
+        <p>Upload your CSV file:</p>
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" required>
+            <br>
+            <button type="submit">Upload and Process</button>
+        </form>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
